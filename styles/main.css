@@ -1,14 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+}
 
+.my-lib-view {
+    height: 100vh;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff8e9
+}
 
 .container-main {
-  background-color: #8fd9c4;
+  background-color: #d81204;
+  color: #fff8e9;
+  height: 100%;
 }
 
 .btn-add-book {
-  background-color: #f2efe9;
-  border-radius: 4px;
+  color: black;
+  background-color: #fff8e9;
+  border-radius: 6px;
+}
+.bi-github {
+  font-size: 1.5rem;
 }
 
 .col-md-9 {
-  background-color: #f2efe9;
+  background-color: #fff8e9;
 }
+
+.table-header {
+  background-color: #fff8e9;
+  color: #f2f0d5;
+  border-radius: 2px;
+}
+
