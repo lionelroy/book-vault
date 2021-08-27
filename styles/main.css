@@ -40,6 +40,10 @@ a:hover {
   color: #fff8e9;
 }
 
+.footer-link {
+  padding-bottom: none;
+}
+
 .bi-github {
   font-size: 1.5rem;
 }
