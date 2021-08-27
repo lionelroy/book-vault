@@ -1,8 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    
-}
+    font-family: 'Antic Didone', serif;
+    font-weight: 600;
+    background-color: #e2a06e;
+
+  }
 
 .my-lib-view {
     height: 100vh;
@@ -18,16 +21,25 @@ a:hover {
 }
 
 .container-main {
-  background-color: #d81204;
   color: #fff8e9;
   height: 100%;
 }
 
+.bi-book-half {
+  font-size: larger;
+}
+
 .btn-add-book {
-  color: black;
+  color: #fe7000;
   background-color: #fff8e9;
   border-radius: 6px;
 }
+
+.btn-add-book:hover {
+  background-color: #fe7000;
+  color: #fff8e9;
+}
+
 .bi-github {
   font-size: 1.5rem;
 }
@@ -41,4 +53,3 @@ a:hover {
   color: #f2f0d5;
   border-radius: 2px;
 }
-
