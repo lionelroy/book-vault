@@ -1,4 +1,4 @@
-# my-library
+# book-vault
 Library app which let's you save data(book list) on local storage.
 <h3>Library project made with:</h3>
  <ul>
