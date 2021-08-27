@@ -30,9 +30,9 @@ a:hover {
 }
 
 .btn-add-book {
-  color: #fe7000;
+  color: black;
   background-color: #fff8e9;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 .btn-add-book:hover {
