@@ -1,59 +1,59 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Antic Didone', serif;
-    font-weight: 600;
-    background-color: #e2a06e;
+  margin: 0;
+  padding: 0;
+  font-family: 'Antic Didone', serif;
+  font-weight: 600;
+  background-color: #e2a06e;
 
-  }
+}
 
 .my-lib-view {
-    height: 100vh;
+  height: 100vh;
 }
 
 a {
-  color: black;
-  text-decoration: none;
+color: black;
+text-decoration: none;
 }
 
 a:hover {
-  color: #fff8e9
+color: #fff8e9
 }
 
 .container-main {
-  color: #fff8e9;
-  height: 100%;
+color: #fff8e9;
+height: 100%;
 }
 
 .bi-book-half {
-  font-size: larger;
+font-size: larger;
 }
 
 .btn-add-book {
-  color: black;
-  background-color: #fff8e9;
-  border-radius: 6px;
+color: black;
+background-color: #fff8e9;
+border-radius: 6px;
 }
 
 .btn-add-book:hover {
-  background-color: #fe7000;
-  color: #fff8e9;
+background-color: #fe7000;
+color: #fff8e9;
 }
 
 .footer-link {
-  padding-bottom: none;
+padding-bottom: none;
 }
 
 .bi-github {
-  font-size: 1.5rem;
+font-size: 1.5rem;
 }
 
 .col-md-9 {
-  background-color: #fff8e9;
+background-color: #fff8e9;
 }
 
 .table-header {
-  background-color: #fff8e9;
-  color: #f2f0d5;
-  border-radius: 2px;
+background-color: #fff8e9;
+color: #f2f0d5;
+border-radius: 2px;
 }
