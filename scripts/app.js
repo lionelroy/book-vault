@@ -6,7 +6,6 @@ const formValid = document.querySelector('#form-validation');
 let myLibrary = [];
 
 
-
 // Book constructor
 function Book(id, title, author, pages, read) {
     this.id = id;
@@ -22,10 +21,9 @@ function displayBooks() {
   myLibrary = JSON.parse(localStorage.getItem('myLib'))
   // empty the table body to avoid any problem
   tbody.innerHTML = ''
-  // loop through the array and create the table elements
+  // loop through the array and create the table elements 
   myLibrary.forEach(i => {
       const tr = document.createElement('tr')
-      const th = document.createElement('th')
       Object.values(i).forEach(item => {
           const td = document.createElement('td')
           if (item === false) {
@@ -76,6 +74,18 @@ function addBookToLibrary() {
     localStorage.setItem('myLib', JSON.stringify(myLibrary))
      displayBooks()
 }
+
+// remove an item from myLibrary array
+function removeItem(items) {
+    items.forEach(element => element.addEventListener('click', (e) => {
+        const item = e.target.parentElement.parentElement;
+        const id = item.querySelector('td').innerHTML;
+        myLibrary = myLibrary.filter(item => item.id !== parseInt(id))
+        localStorage.setItem('myLib', JSON.stringify(myLibrary))
+        item.remove()
+    }))
+}
+
 
 addNewBook.addEventListener('click', addBookToLibrary)
 
