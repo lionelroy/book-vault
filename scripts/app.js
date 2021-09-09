@@ -86,6 +86,12 @@ function removeItem(items) {
     }))
 }
 
+if (localStorage.getItem('myLib') === null) {
+  // array to hold book objects
+  localStorage.setItem('myLib', JSON.stringify(myLibrary));
+}else{
+  myLibrary = JSON.parse(localStorage.getItem('myLib'))
+}
 
 addNewBook.addEventListener('click', addBookToLibrary)
 
