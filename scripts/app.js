@@ -21,7 +21,7 @@ function displayBooks() {
  
   // empty the table body to avoid any problem
   tbody.innerHTML = ''
-  // loop through the array and create the table elements on the fly
+  // loop through the array and create the table elements
   myLibrary.forEach(i => {
       const tr = document.createElement('tr')
       const th = document.createElement('th')
@@ -47,6 +47,33 @@ function displayBooks() {
       removeItem(rems);
       toggleRead(status);
   }
+}
+
+// Add a Book object to myLibrary array 
+function addBookToLibrary() {
+    // generate an id for a new book
+    const id = myLibrary.length === 0 ? 1 : myLibrary[myLibrary.length - 1].id + 1;
+    // Capture form fields
+    const author = document.querySelector('#author').value;
+    const title = document.querySelector('#title').value;
+    const pages = document.querySelector('#pages').value;
+    const read = document.querySelector('#read').checked;
+    // ensure that form fields is not empty
+    if (author === '' || title === '' || pages === '' || pages == 0) {
+        formValid.style.display = 'block'
+        setTimeout(() => {
+            formValid.style.display = 'none'
+        }, 3000)
+        return;
+    }
+    // create new instance from Book constructor
+    const book = new Book(id, title, author, pages, read)
+    // clear form fields
+    form.reset();
+    myLibrary.push(book)
+    // Save myLibrary array in the browser local storage
+    localStorage.setItem('myLib', JSON.stringify(myLibrary))
+     displayBooks()
 }
 
 addNewBook.addEventListener('click', addBookToLibrary)
