@@ -87,6 +87,23 @@ function removeItem(items) {
     }))
 }
 
+// Change read status
+function toggleRead(status) {
+  status.forEach(state => state.addEventListener('click', (e) => {
+      const item = e.target.parentElement.parentElement;
+      const id = item.querySelector('td').innerHTML;
+      myLibrary = myLibrary.map(item => {
+          if (item.id === parseInt(id)) {
+              item.read = !item.read
+              localStorage.setItem('myLib', JSON.stringify(myLibrary))
+              displayBooks()
+          }
+          return item;
+      })
+  }))
+  
+}
+
 if (localStorage.getItem('myLib') === null) {
   // array to hold book objects
   localStorage.setItem('myLib', JSON.stringify(myLibrary));
