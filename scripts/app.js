@@ -18,7 +18,8 @@ function Book(id, title, author, pages, read) {
 
 // read myLibrary array object and display it in a table
 function displayBooks() {
- 
+  // get myLibrary from localstorage and assign it to myLibrary array
+  myLibrary = JSON.parse(localStorage.getItem('myLib'))
   // empty the table body to avoid any problem
   tbody.innerHTML = ''
   // loop through the array and create the table elements
