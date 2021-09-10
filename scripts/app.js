@@ -24,7 +24,6 @@ function displayBooks() {
   // loop through the array and create the table elements 
   myLibrary.forEach(i => {
       const tr = document.createElement('tr')
-      const th = document.createElement('th')
       Object.values(i).forEach(item => {
           const td = document.createElement('td')
           if (item === false) {
